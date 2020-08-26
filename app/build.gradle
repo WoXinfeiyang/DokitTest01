@@ -38,7 +38,7 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:3.2.0'
-    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:3.2.0'
-    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:3.2.0'
+    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
+    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
+    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
 }
