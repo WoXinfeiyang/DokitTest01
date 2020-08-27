@@ -2,6 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+class GreetingPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        project.task('hello') {
+            doLast {
+                println 'Hello from the GreetingPlugin'
+            }
+        }
+    }
+}
+apply plugin: GreetingPlugin
 apply plugin: 'com.fxj.mygradleplugin'
 
 android {
