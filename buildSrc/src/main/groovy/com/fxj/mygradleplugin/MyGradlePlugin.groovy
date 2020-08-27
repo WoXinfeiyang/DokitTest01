@@ -4,7 +4,7 @@ import org.gradle.api.Project
 
 /*
 参考文章:
-https://blog.csdn.net/Notzuonotdied/article/details/105740915
+https://blog.csdn.net/u010982507/article/details/104875115
 https://blog.csdn.net/weixin_38883338/article/details/90727880
 */
 public class MyGradlePlugin implements Plugin<Project> {
