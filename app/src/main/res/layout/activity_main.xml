@@ -24,4 +24,33 @@
         android:text="显示Dokit入口"
         android:textAllCaps="false"
         />
+
+    <Button
+        android:id="@+id/btn_main_btn03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_btn_margin_top"
+        android:text="Fps测试"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btn_main_btn04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_btn_margin_top"
+        android:text="ANR测试"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/btn_main_btn05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_btn_margin_top"
+        android:text="Crash测试"
+        android:textAllCaps="false"
+        />
 </LinearLayout>
