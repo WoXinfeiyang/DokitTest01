@@ -28,6 +28,7 @@ class MainActivity : Activity(), View.OnClickListener {
         findViewById<Button>(R.id.btn_main_btn04).setOnClickListener(this)
 
         findViewById<Button>(R.id.btn_main_btn05).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_main_btn06).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -38,8 +39,10 @@ class MainActivity : Activity(), View.OnClickListener {
             R.id.btn_main_btn02->{
                 if(DoraemonKit.isShow){
                     DoraemonKit.hide()
+                    mainBtn02?.setText("显示DoKit入口")
                 }else{
                     DoraemonKit.show()
+                    mainBtn02?.setText("隐藏DoKit入口")
                 }
             }
             R.id.btn_main_btn03->{
@@ -56,6 +59,11 @@ class MainActivity : Activity(), View.OnClickListener {
             R.id.btn_main_btn05->{
                 var intent=Intent()
                 intent.setClass(this@MainActivity,CrashTestActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_main_btn06->{
+                var intent=Intent()
+                intent.setClass(this@MainActivity,MemoryLeakTestActivity::class.java)
                 startActivity(intent)
             }
         }

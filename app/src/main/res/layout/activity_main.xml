@@ -53,4 +53,14 @@
         android:text="Crash测试"
         android:textAllCaps="false"
         />
+
+    <Button
+        android:id="@+id/btn_main_btn06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_btn_margin_top"
+        android:text="MemoryLeak测试"
+        android:textAllCaps="false"
+        />
 </LinearLayout>
