@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.didi.dokit.debug'
 
 class GreetingPlugin implements Plugin<Project> {
     void apply(Project project) {
@@ -12,7 +13,6 @@ class GreetingPlugin implements Plugin<Project> {
     }
 }
 apply plugin: GreetingPlugin
-apply plugin: 'com.fxj.mygradleplugin'
 
 android {
     compileSdkVersion 28
@@ -50,9 +50,14 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
-    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
-    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
+//    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
+//    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
+//    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
+
+    debugImplementation project(":doraemonkit")
+    releaseImplementation project(":doraemonkit-no-op")
+    debugImplementation project(":doraemonkit-leakcanary")
+
     //权限申请框架
     implementation 'pub.devrel:easypermissions:'+EASYPERMISSIONS_VERSION
 }

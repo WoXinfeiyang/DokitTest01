@@ -1,3 +1,9 @@
 include ':buildSrc'
 include ':app'
+include ':doraemonkit'
+//include ':doraemonkit-rpc'
+include ':doraemonkit-no-op'
+include ':doraemonkit-weex'
+include ':doraemonkit-leakcanary'
+include ':doraemonkit-plugin'
 rootProject.name = "DokitTest01"
