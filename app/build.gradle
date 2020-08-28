@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 if(rootProject.ext.config["runType"]==0){//当runType==0使用本地Gradle插件
     apply plugin: 'com.didi.dokit.debug'
-}else if(rootProject.ext.config["runType"]==1){//当runType==0使用远程Gradle插件
+}else if(rootProject.ext.config["runType"]==1){//当runType==1使用远程Gradle插件
     apply plugin: 'com.didi.dokit'
 }
 
