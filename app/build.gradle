@@ -50,13 +50,15 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-//    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
-//    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
-//    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
-
-    debugImplementation project(":doraemonkit")
-    releaseImplementation project(":doraemonkit-no-op")
-    debugImplementation project(":doraemonkit-leakcanary")
+    if(rootProject.ext.config["runType"]==0){//依赖dokit本地module运行
+        debugImplementation project(":doraemonkit")
+        releaseImplementation project(":doraemonkit-no-op")
+        debugImplementation project(":doraemonkit-leakcanary")
+    }else if(rootProject.ext.config["runType"]==1){//依赖dokit远程aar运行
+        debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
+        releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
+        debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
+    }
 
     //权限申请框架
     implementation 'pub.devrel:easypermissions:'+EASYPERMISSIONS_VERSION
