@@ -53,4 +53,6 @@ dependencies {
     debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:'+DORAEMONKIT_VERSION
     releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:'+DORAEMONKIT_NO_OP_VERSION
     debugImplementation 'com.didichuxing.doraemonkit:doraemonkit-leakcanary:'+DORAEMONKIT_LEAKCANARY_VERSION
+    //权限申请框架
+    implementation 'pub.devrel:easypermissions:'+EASYPERMISSIONS_VERSION
 }
