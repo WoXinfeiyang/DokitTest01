@@ -1,7 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.didi.dokit.debug'
+if(rootProject.ext.config["runType"]==0){//当runType==0使用本地Gradle插件
+    apply plugin: 'com.didi.dokit.debug'
+}else if(rootProject.ext.config["runType"]==1){//当runType==0使用远程Gradle插件
+    apply plugin: 'com.didi.dokit'
+}
 
 class GreetingPlugin implements Plugin<Project> {
     void apply(Project project) {
