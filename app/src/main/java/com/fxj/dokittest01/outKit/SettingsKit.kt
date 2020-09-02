@@ -12,7 +12,7 @@ import com.fxj.dokittest01.SettingsActivity
 class SettingsKit:AbstractKit() {
 
     companion object{
-        val TAG:String=SettingsKit::class.toString()
+        val TAG:String= SettingsKit::class.java.simpleName
     }
     override val category: Int
         get() = Category.BIZ
